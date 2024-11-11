@@ -1,0 +1,134 @@
+RESULTADOS TDE 3 - SPARK
+ALUNOS: Brunno Tatsuo, Gabriel Felipe e Tiago Paulin.
+
+# 1 - Contar transações envolvendo o Brasil:
+184748
+
+# 2 - Número de transações envolvendo o Brasil com PairRDD:
+[('Brazil', 184748)]
+
+# 3 - Número de transações envolvendo o Brasil em 2016 com RDD:
+6210
+
+# 4 - Número de transações envolvendo o Brasil em 2016 com PairRDD:
+[('Brazil', 6210)]
+
+# 5 - Transações por flow e ano a partir de 2010:
+(('2010', 'EXPORT'), 125013)
+(('2010', 'IMPORT'), 222447)
+(('2010', 'RE-EXPORT'), 17058)
+(('2010', 'RE-IMPORT'), 9273)
+(('2011', 'EXPORT'), 125909)
+(('2011', 'IMPORT'), 220850)
+(('2011', 'RE-EXPORT'), 17564)
+(('2011', 'RE-IMPORT'), 10273)
+(('2012', 'EXPORT'), 128072)
+(('2012', 'IMPORT'), 222034)
+(('2012', 'RE-EXPORT'), 16900)
+(('2012', 'RE-IMPORT'), 10337)
+(('2013', 'EXPORT'), 127904)
+(('2013', 'IMPORT'), 216282)
+(('2013', 'RE-EXPORT'), 16758)
+(('2013', 'RE-IMPORT'), 9992)
+(('2014', 'EXPORT'), 125142)
+(('2014', 'IMPORT'), 208749)
+(('2014', 'RE-EXPORT'), 20139)
+(('2014', 'RE-IMPORT'), 10424)
+(('2015', 'EXPORT'), 125878)
+(('2015', 'IMPORT'), 203920)
+(('2015', 'RE-EXPORT'), 18966)
+(('2015', 'RE-IMPORT'), 10288)
+(('2016', 'EXPORT'), 106104)
+(('2016', 'IMPORT'), 160235)
+(('2016', 'RE-EXPORT'), 16147)
+(('2016', 'RE-IMPORT'), 7024)
+
+# 6 - Média do Price em 2016 com RDD:
+R$ 689,923,030.98
+
+# 7 - Média do Price em 2016 com PairRDD:
+('2016', 'R$ 689,923,030.98')
+
+# 8 - O preço máximo e mínimo por categoria e por ano, ordenado por país com PairRDD (20 primeiras linhas):
+(('1988', '01_LIVE_ANIMALS'), ('R$ 904,041,860.00', 'R$ 545.00'))
+(('1988', '02_MEAT_AND_EDIBLE_MEAT_OFFAL'), ('R$ 7,479,678,285.00', 'R$ 115.00'))
+(('1988', '03_FISH_CRUSTACEANS_MOLLUSCS_AQUATIC_INVERTEBRATES_NE'), ('R$ 788,415,965.00', 'R$ 90.00'))
+(('1988', '04_DAIRY_PRODUCTS_EGGS_HONEY_EDIBLE_ANIMAL_PRODUCT_NES'), ('R$ 7,373,920,000.00', 'R$ 60.00'))
+(('1988', '05_PRODUCTS_OF_ANIMAL_ORIGIN_NES'), ('R$ 1,111,410,000.00', 'R$ 35.00'))
+(('1988', '06_LIVE_TREES_PLANTS_BULBS_ROOTS_CUT_FLOWERS_ETC'), ('R$ 4,336,074,880.00', 'R$ 125.00'))
+(('1988', '07_EDIBLE_VEGETABLES_AND_CERTAIN_ROOTS_AND_TUBERS'), ('R$ 2,216,529,920.00', 'R$ 230.00'))
+(('1988', '08_EDIBLE_FRUIT_NUTS_PEEL_OF_CITRUS_FRUIT_MELONS'), ('R$ 2,276,124,960.00', 'R$ 10.00'))
+(('1988', '09_COFFEE_TEA_MATE_AND_SPICES'), ('R$ 9,269,400,320.00', 'R$ 40.00'))
+(('1988', '10_CEREALS'), ('R$ 10,434,202,650.00', 'R$ 35.00'))
+(('1988', '11_MILLING_PRODUCTS_MALT_STARCHES_INULIN_WHEAT_GLUTE'), ('R$ 1,093,093,515.00', 'R$ 130.00'))
+(('1988', '12_OIL_SEED_OLEAGIC_FRUITS_GRAIN_SEED_FRUIT_ETC_NE'), ('R$ 7,138,045,120.00', 'R$ 125.00'))
+(('1988', '13_LAC_GUMS_RESINS_VEGETABLE_SAPS_AND_EXTRACTS_NES'), ('R$ 259,977,220.00', 'R$ 3,880.00'))
+(('1988', '14_VEGETABLE_PLAITING_MATERIALS_VEGETABLE_PRODUCTS_NES'), ('R$ 135,620,000.00', 'R$ 35.00'))
+(('1988', '15_ANIMAL_VEGETABLE_FATS_AND_OILS_CLEAVAGE_PRODUCTS_ET'), ('R$ 699,984,800.00', 'R$ 60.00'))
+(('1988', '16_MEAT_FISH_AND_SEAFOOD_FOOD_PREPARATIONS_NES'), ('R$ 2,354,874,460.00', 'R$ 100.00'))
+(('1988', '17_SUGARS_AND_SUGAR_CONFECTIONERY'), ('R$ 3,090,624,325.00', 'R$ 45.00'))
+(('1988', '18_COCOA_AND_COCOA_PREPARATIONS'), ('R$ 2,235,950,080.00', 'R$ 75.00'))
+(('1988', '19_CEREAL_FLOUR_STARCH_MILK_PREPARATIONS_AND_PRODUCTS'), ('R$ 1,379,464,960.00', 'R$ 1,085.00'))
+(('1988', '20_VEGETABLE_FRUIT_NUT_ETC_FOOD_PREPARATIONS'), ('R$ 1,682,430,080.00', 'R$ 40.00'))
+
+# 9 - Retornar um único valor para PairRDD contendo o país com a maior exportação (Flow=Export):
+(('EU-28', 'Export'), 'R$ 185,677,734,421,835.00')
+
+# 10 - Retornar o preço máximo por país e por ano utilizando as funções do SparkSQL (20 primeiras linhas):
++-----------+----+---------------+
+|country    |year|max_price_brl  |
++-----------+----+---------------+
+|Afghanistan|2008|1.5099300645E10|
+|Afghanistan|2009|1.6682173905E10|
+|Afghanistan|2010|2.5771249335E10|
+|Afghanistan|2011|3.1951554735E10|
+|Afghanistan|2012|3.1024920505E10|
+|Afghanistan|2013|4.2772068745E10|
+|Afghanistan|2014|3.848589085E10 |
+|Afghanistan|2015|3.8614325245E10|
+|Afghanistan|2016|3.2670702065E10|
+|Albania    |1996|4.69240896E9   |
+|Albania    |1997|3.14513152E9   |
+|Albania    |1998|4.20628092E9   |
+|Albania    |1999|5.771755845E9  |
+|Albania    |2000|5.447339395E9  |
+|Albania    |2001|6.65315533E9   |
+|Albania    |2002|7.51842603E9   |
+|Albania    |2003|9.3216443E9    |
+|Albania    |2004|1.1500841705E10|
+|Albania    |2005|1.307173506E10 |
+|Albania    |2006|1.528704213E10 |
++-----------+----+---------------+
+
+# 11 - Buscar o preço mínimo por país e por ano, filtrado de forma crescente por ano e país (ordem alfabética) (20 primeiras linhas):
++------------------------+----+-------------+
+|country                 |year|min_price_brl|
++------------------------+----+-------------+
+|Australia               |1988|35.0         |
+|Finland                 |1988|10.0         |
+|Fmr Fed. Rep. of Germany|1988|5000.0       |
+|Greece                  |1988|10.0         |
+|Haiti                   |1988|505.0        |
+|Iceland                 |1988|40.0         |
+|India                   |1988|30.0         |
+|Japan                   |1988|8035.0       |
+|Portugal                |1988|25.0         |
+|Rep. of Korea           |1988|5.0          |
+|Switzerland             |1988|35.0         |
+|Thailand                |1988|20.0         |
+|Australia               |1989|5.0          |
+|Bangladesh              |1989|5.0          |
+|Brazil                  |1989|5.0          |
+|Canada                  |1989|20.0         |
+|Cyprus                  |1989|10.0         |
+|Denmark                 |1989|475.0        |
+|Finland                 |1989|35.0         |
+|Fmr Fed. Rep. of Germany|1989|5000.0       |
++------------------------+----+-------------+
+
+# 12 - Transação que teve o maior preço por kg do tipo export. Buscar essa informação e indicar em qual ano, país e categoria, ela aconteceu:
++-------+----+--------------------------------------------+----------------+
+|country|year|category                                    |price_per_kg_brl|
++-------+----+--------------------------------------------+----------------+
+|Norway |1999|89_ships_boats_and_other_floating_structures|1.463344E9      |
++-------+----+--------------------------------------------+----------------+
