@@ -1,2 +1,2 @@
 # TDE3-SPARK
-TDE 3 - SPARK
+ALUNOS: Brunno Tatsuo, Gabriel Felipe, Sidnei Henrique e Tiago Paulin.
